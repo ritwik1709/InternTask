@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   
+    <!-- taiwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- anime.js for animation of the box -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+    <!-- fontausome icons -->
+    <script src="https://kit.fontawesome.com/86820367e3.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+        <div id="assignment" class="relative  p-10 m-10 shadow-2xl" style="background: white; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);">
+            <div class="z-[-100] absolute inset-0 bg-indigo-900 shadow-lg " style="clip-path: polygon(0 0, 100% 0, 0 100%, 0 0);"></div>
+
+        <div class="text-left text-white text-3xl font-bold mb-16 uppercase ml-9">our services</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-10">
+
+            <!--Box1 -->
+            <div id="box1" class="relative bg-white text-center p-6 rounded-lg shadow-lg">
+                <div class="icon absolute top-[-35px] left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-full shadow-lg border-4 border-indigo-900">
+                   
+                    <i class="fa-solid fa-wrench mx-auto text-4xl text-indigo-900"></i>
+                </div>
+
+                <h2 class="text-gray-800 font-bold text-lg mt-10">Emergency Plumbing Services</h2>
+                <p class="text-gray-500 text-sm mt-2">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends and holidays.</p>
+                <a href="#" class="text-indigo-600 mt-4 block font-bold uppercase">
+                    Explore this service                     
+                    <i class="fa-solid fa-location-arrow"></i>
+                </a>
+            </div>
+    
+            <!--box 2-->
+            <div id="box2" class="relative bg-white text-center p-6 rounded-lg shadow-lg">
+                <div class="icon absolute top-[-35px] left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-full shadow-lg border-4 border-indigo-900 ">
+                    <!-- Icon Placeholder -->
+                    <i class="fa-solid fa-faucet-drip mx-auto text-4xl text-indigo-900"></i>
+                </div>
+                <h2 class="text-gray-800 font-bold text-lg mt-10">Plumbing and Drains</h2>
+                <p class="text-gray-500 text-sm mt-2">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+                <a href="#" class="text-indigo-600 mt-4 block font-bold uppercase">Explore this service <i class="fa-solid fa-location-arrow"></i></a>
+            </div>
+    
+            <!--box 3 -->
+            <div id="box3" class="relative bg-white text-center p-6 rounded-lg shadow-lg">
+                <div class="icon absolute top-[-35px] left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-full shadow-lg border-4 border-indigo-900">
+                    <!-- Icon Placeholder -->
+                    <i class="fa-solid fa-house-flood-water mx-auto text-4xl text-indigo-900"></i>
+                </div>
+                <h2 class="text-gray-800 font-bold text-lg mt-10">Water Damage</h2>
+                <p class="text-gray-500 text-sm mt-2">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+                <a href="#" class="text-indigo-600 mt-4 block font-bold uppercase">Explore this service <i class="fa-solid fa-location-arrow"></i></a>
+            </div>
+    
+            <!-- box 4 -->
+            <div id="box4" class="relative bg-white text-center p-6 rounded-lg shadow-lg">
+                <div class="icon absolute top-[-35px] left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-full shadow-lg border-4 border-indigo-900">
+                    <!-- Icon Placeholder -->
+                    <i class="fa-solid fa-temperature-arrow-up mx-auto text-4xl text-indigo-900"></i>
+                </div>
+                <h2 class="text-gray-800 font-bold text-lg mt-10">Water Heaters</h2>
+                <p class="text-gray-500 text-sm mt-2">Trust Roto-Rooter for repair and replacement of gas, electric and tankless water heaters.</p>
+                <a href="#" class="text-indigo-600 mt-4 block font-bold uppercase">Explore this service <i class="fa-solid fa-location-arrow"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Animation script -->
+    <script>
+        // Apply 360-degree rotation on hover using anime.js and reset after completion
+        document.querySelectorAll('[id^=box]').forEach(box => {
+            box.addEventListener('mouseenter', () => {
+                anime({
+                    targets: box,
+                    rotateY: '360deg',
+                    duration: 1000,
+                    easing: 'easeInOutSine',
+                    complete: function(anim) {
+                        // Reset the rotation after the animation completes
+                        box.style.transform = 'rotateY(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+    
+  </body>
+</html>
